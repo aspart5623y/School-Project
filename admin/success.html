@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPNO - Comp Sci HOD Office</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/bg/index.jpg" type="image/x-icon">
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="../vendor/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- Font Awesome Linking -->
+    <link rel="stylesheet" href="../vendor/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">
+    <!-- AOS CSS Link -->
+    <link rel="stylesheet" href="../vendor/aos-master/aos-master/dist/aos.css">
+    <!-- External CSS Stylesheet Link -->
+    <link rel="stylesheet" href="../admin/admin-css/style.css">
+</head>
+<body>
+
+    <!-- 
+        ========================  P R E L O A D E R  =======================
+    -->
+    <!-- <div id="preloader" class="bg-light">
+        <img loading="lazy" src="../assets/preloader/loader (2).gif" alt="preloader">
+    </div> -->
+
+
+     <!-- 
+        ========================  N A V B A R  =======================
+    -->
+    <nav class="navbar navbar-light bg-white position-relative shadow-sm fixed-top">
+        <div class="container-fluid">
+            <div class="d-flex flex-row w-100">
+                <!--Sidebar Toggle Button-->
+                <button type="button" id="navbar-toggler" class="btn mr-1 mr-sm-3 mr-md-4">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="javascript:void(0)" class="navbar-brand m-auto">
+                    <img src="../assets/img/logo.png" width="160px" class="img-fluid" alt="">
+                </a>
+
+                <!-- M E N U -->
+                <div class="navbar-collapse">
+                    <!-- Menu List -->
+                    <ul class="navbar-nav ml-auto d-flex flex-row justify-content-end">
+                        <!-- notification -->
+                        <li class="nav-item notification-dropdown dropdown position-relative mx-2">
+                            <a href="#" class="nav-link p-3" id="notification" data-toggle="dropdown">
+                                <i class="far fa-bell" style="font-size: 20px;"></i>
+                                <span class="dot rounded-circle active" style="width: 7px; height: 7px; background-color: red;"></span>
+                            </a>
+
+                            <div class="dropdown-menu position-absolute shadow-sm">
+                                <!-- notification -->
+                                <a href="javascript:void(0)" class="dropdown-item d-flex px-2 py-2">
+                                    <span class="image align-self-start">
+                                        <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                                    </span>
+                                    <div class="ml-3">
+                                        <h6 class="font-weight-bold mb-0">
+                                            Ebube Ricky
+                                        </h6>
+                                        <p class="text-muted mb-n1">Booked new appointment</p>
+                                        <span id="time"class="text-muted ">10:14am</span> |
+                                        <span id="date" class="text-muted">12-02-2021</span>
+                                    </div>
+                                </a>
+
+                                <!-- notification -->
+                                <a href="javascript:void(0)" class="dropdown-item d-flex px-2 py-2">
+                                    <span class="image align-self-start">
+                                        <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                                    </span>
+                                    <div class="ml-3">
+                                        <h6 class="font-weight-bold mb-0">
+                                            Ebube Ricky
+                                        </h6>
+                                        <p class="text-muted mb-n1">Rejected your appointment</p>
+                                        <span id="time"class="text-muted ">10:14am</span> |
+                                        <span id="date" class="text-muted">12-02-2021</span>
+                                    </div>
+                                </a>
+
+                                <!-- notification -->
+                                <a href="javascript:void(0)" class="dropdown-item d-flex px-2 py-2">
+                                    <span class="image align-self-start">
+                                        <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                                    </span>
+                                    <div class="ml-3">
+                                        <h6 class="font-weight-bold mb-0">
+                                            Ebube Ricky
+                                        </h6>
+                                        <p class="text-muted mb-n1">Approved your appointment</p>
+                                        <span id="time"class="text-muted ">10:14am</span> |
+                                        <span id="date" class="text-muted">12-02-2021</span>
+                                    </div>
+                                </a>
+
+                                <!-- no new notification alert -->
+                                <!-- <p href="javascript:void(0)" class="text-muted text-center px-2 py-2" style="font-size: 14px;">
+                                    You do not have any new notification
+                                </p> -->
+
+                                
+                            </div>
+                        </li>
+
+                        
+
+                        <!-- User -->
+                        <li class="nav-item user-dropdown dropdown position-relative mx-2">
+                            <a href="#" class="nav-link" id="user" data-toggle="dropdown">
+                                <img src="../assets/avatar/3.jpeg" alt="" class="img-fluid rounded-circle" width="40px" height="40px">
+                            </a>
+                            <!-- User Dropdown -->
+                            <div class="dropdown-menu shadow-sm position-absolute">
+                                <!-- User -->
+                                <a href="javascript:void(0)" class="dropdown-item px-4 py-3 border-bottom">Victor Abraham</a>
+                                <!-- Profile  -->
+                                <a href="profile.html" class="dropdown-item px-4 py-3">
+                                    <i class="far fa-user-circle" style="font-size: 18px;"></i>
+                                    &nbsp;
+                                    Profile
+                                </a>
+                                <!-- Resign -->
+                                <a href="javascript:void(0)" data-target="#resignModal" data-toggle="modal" class="dropdown-item px-4 py-3">
+                                    <i class="fas fa-user-times" style="font-size: 18px;"></i>
+                                    &nbsp;
+                                    Resign as HOD
+                                </a>
+                                <!-- Logout -->
+                                <a href="javascript:void(0)" data-target="#logoutModal" data-toggle="modal" class="dropdown-item px-4 py-3 border-top">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+     <!-- 
+        ========================  L O G O U T     M O D A L  =======================
+    -->
+    <div class="modal fade" id="logoutModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-body text-center">
+                    <h6 class="mb-4">Are you sure you want to logout?</h6>
+                    <a href="login.html" class="btn btn-primary px-5 py-2">Yes</a>
+                    <button type="button" data-dismiss="modal" class="btn btn-light px-5 py-2">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 
+        ========================  R E S I G N      M O D A L  =======================
+    -->
+    <div class="modal fade" id="resignModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <form novalidate>
+
+                    <div class="modal-header">
+                        <!-- Search Input Box -->
+                        <div class="input-group my-n2">
+                            <!-- Search icon container -->
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <!-- Main input -->
+                            <input type="text" class="form-control" required>
+                            <!-- Password Visibility Button -->
+                            <div class="input-group-append">
+                                <button type="button" class="btn">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </div>
+                            <!-- Search label -->
+                            <label for="Title">Search User</label>
+                        </div>
+                    </div>
+                    <div class="modal-body text-center">
+                        <!-- New HOD -->
+                        <div class="newHOD text-dark d-flex px-2 py-2">
+                            <span class="image">
+                                <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                            </span>
+                            <div class="ml-3 align-self-center w-100">
+                                <!-- User -->
+                                <div class="d-flex justify-content-between">
+                                    <!-- Search label -->
+                                    <h6 class="font-weight-bold">Ebube Rocky</h6>
+                                    <div>
+                                        <!-- Check -->
+                                        <input type="radio" name="allUsers" value="user" style="position: relative; top: -2px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New HOD -->
+                        <div class="newHOD text-dark d-flex px-2 py-2">
+                            <span class="image">
+                                <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                            </span>
+                            <div class="ml-3 align-self-center w-100">
+                                <!-- User -->
+                                <div class="d-flex justify-content-between">
+                                    <!-- Search label -->
+                                    <h6 class="font-weight-bold">Ebube Rocky</h6>
+                                    <div>
+                                        <!-- Check -->
+                                        <input type="radio" name="allUsers" value="user" style="position: relative; top: -2px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New HOD -->
+                        <div class="newHOD text-dark d-flex px-2 py-2">
+                            <span class="image">
+                                <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                            </span>
+                            <div class="ml-3 align-self-center w-100">
+                                <!-- User -->
+                                <div class="d-flex justify-content-between">
+                                    <!-- Search label -->
+                                    <h6 class="font-weight-bold">Ebube Rocky</h6>
+                                    <div>
+                                        <!-- Check -->
+                                        <input type="radio" name="allUsers" value="user" style="position: relative; top: -2px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New HOD -->
+                        <div class="newHOD text-dark d-flex px-2 py-2">
+                            <span class="image">
+                                <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                            </span>
+                            <div class="ml-3 align-self-center w-100">
+                                <!-- User -->
+                                <div class="d-flex justify-content-between">
+                                    <!-- Search label -->
+                                    <h6 class="font-weight-bold">Ebube Rocky</h6>
+                                    <div>
+                                        <!-- Check -->
+                                        <input type="radio" name="allUsers" value="user" style="position: relative; top: -2px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- New HOD -->
+                        <div class="newHOD text-dark d-flex px-2 py-2">
+                            <span class="image">
+                                <img src="../assets/avatar/3.jpeg" class="img-fluid rounded-circle" width="40px" alt="">
+                            </span>
+                            <div class="ml-3 align-self-center w-100">
+                                <!-- User -->
+                                <div class="d-flex justify-content-between">
+                                    <!-- Search label -->
+                                    <h6 class="font-weight-bold">Ebube Rocky</h6>
+                                    <div>
+                                        <!-- Check -->
+                                        <input type="radio" name="allUsers" value="user" style="position: relative; top: -2px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary px-4">
+                            Assign as new HOD
+                        </button>
+                        <button class="btn btn-light px-4" data-dismiss="modal">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+     <!-- 
+        ========================  A D M I N      P A N E L  =======================
+    -->
+    <section class="admin-panel">
+        <div id="sidebar" class="shadow">
+            <ul class="sidebar-nav">
+                <!-- Home -->
+                <li class="sidebar-item">
+                    <a href="admin.html" class="sidebar-link">Home</a>
+                </li>
+                <!-- Book new appointment -->
+                <li class="sidebar-item">
+                    <a href="new-appointment.html" class="sidebar-link active">Book new appointment</a>
+                </li>
+                <!-- Incoming appointment log -->
+                <li class="sidebar-item">
+                    <a href="incoming.html" class="sidebar-link">Incoming appointment log</a>
+                </li>
+                <!-- Outgoing appointment log -->
+                <li class="sidebar-item">
+                    <a href="outgoing.html" class="sidebar-link">Outgoing appointment log</a>
+                </li>
+                <!-- Contacts -->
+                <li class="sidebar-item">
+                    <a href="contacts.html" class="sidebar-link">Contacts</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 
+            ========================  M A I N      P A G E  =======================
+        -->
+        <section id="main-page">
+            <!-- 
+                ========================  B R E A D C R U M B  =======================
+            -->
+            <div class="pager bg-white shadow-sm">
+                <div class="container">
+                    <ul class="breadcrumb bg-transparent rounded-0">
+                        <li class="breadcrumb-item">
+                            Home
+                        </li>
+                        <li class="breadcrumb-item">
+                            Appointments
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <a href="success.html" class="text-primary">
+                                Successfully Booked Appointment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <!-- 
+                ========================  B O O K I N G     S E C T I O N  =======================
+            -->
+            <section class="booking-section">
+                <div class="container">
+                    <div class="booking-form">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 m-3 m-sm-0 shadow bg-white success">
+                                <div class="can text-center">
+                                    <h2 class="font-weight-bold">
+                                        Your appointment has been booked successfully!!
+                                    </h2>
+                                    <div class="booking-success-icon text-success">
+                                        <i class="far fa-check-circle"></i>
+                                    </div>
+                                    <a href="outgoing.html" class="btn btn-light px-5 py-3">Done</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        
+
+
+
+            <!-- 
+                ========================  F O O T E R  =======================
+            -->
+            <footer class="bg-dark py-5">
+                <div class="container text-white text-center">
+                    <!-- footer items container -->
+                    <div class="d-flex justify-content-center">
+                        <!-- item 1 -->
+                        <div class="px-2 d-flex align-items-center">
+                            <img src="../assets/bg/index.jpg" width="100px" class="img-fluid rounded-circle" alt="">
+                        </div>
+                        <!-- item 2 -->
+                        <div class="px-2">
+                            <img src="../assets/bg/sias.jpg" width="100px" class="img-fluid rounded-circle" alt="">
+                        </div>
+                        <!-- item 3 -->
+                        <div class="px-2">
+                            <img src="../assets/bg/NACOSS-logo.png" width="100px" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <!-- main footer with date -->
+                    <div class="footer mt-5">
+                        Copyright &copy; <span id="footerYear"></span>. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery Link -->
+    <script src="../vendor/jQuery/jquery-3.5.1.min.js"></script>
+    <!-- Popper JS Link -->
+    <script src="../vendor/popper.js/umd/popper.min.js"></script>
+    <!-- Bootstrap JS Link -->
+    <script src="../vendor/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <!-- AOS JS Link -->
+    <script src="../vendor/aos-master/aos-master/dist/aos.js"></script>
+    <!-- External JS Script Link -->
+    <script src="../admin/admin-js/new-appt.js"></script>
+    
+</body>
+</html>

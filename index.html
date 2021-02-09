@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPNO - Comp Sci HOD Office</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/bg/index.jpg" type="image/x-icon">
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="./vendor/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- Font Awesome Linking -->
+    <link rel="stylesheet" href="./vendor/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.min.css">
+    <!-- AOS CSS Link -->
+    <link rel="stylesheet" href="./vendor/aos-master/aos-master/dist/aos.css">
+    <!-- External CSS Stylesheet Link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="index-page">
+    
+    <!-- 
+        ========================  P R E L O A D E R  =======================
+    -->
+    <div id="preloader" class="bg-light">
+        <img loading="lazy" src="./assets/preloader/loader (2).gif" alt="preloader">
+    </div>
+
+
+
+    <!-- 
+        ========================  N A V B A R  =======================
+    -->
+    <nav class="navbar navbar-light bg-white navbar-expand-lg shadow-sm fixed-top">
+        <div class="container">
+            <!-- Navbar Brand -->
+            <a href="javascript:void(0)" class="navbar-brand">
+                <img src="./assets/img/logo.png" width="120px" class="img-fluid" alt="">
+            </a>
+
+            <!--Sidebar Toggle Button-->
+            <button type="button" class="navbar-toggler border-0">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="sidebar-overlay"></div>
+
+            <!-- M E N U -->
+            <div class="navbar-collapse">
+
+                <!--Sidebar Toggle Button-->
+                <button type="button" class="sidebar-toggler d-block d-lg-none btn border-0">
+                    <span>&times;</span>
+                </button>
+
+                <!-- Menu List -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link p-3 active">
+                            Home
+                        </a>
+                    </li>
+                    <!-- Manage Appointments -->
+                    <li class="nav-item manageAppoint-dropdown dropdown">
+                        <a href="#" class="nav-link dropdown-toggle p-3" id="manageAppoint" data-toggle="dropdown">
+                            Manage Appointments
+                        </a>
+                        <!-- Manage Appointments Dropdown -->
+                        <div class="dropdown-menu fade">
+                            <!-- Book new appointment -->
+                            <a href="new-appointment.html" class="dropdown-item px-4 py-3">Book a new appointment</a>
+                            <!-- Check incoming appointment  -->
+                            <a href="incoming-appointment.html" class="dropdown-item px-4 py-3">Check incoming appointment</a>
+                            <!-- Check booked appointment -->
+                            <a href="booked-appointment.html" class="dropdown-item px-4 py-3">Check booked appointment</a>
+                        </div>
+                    </li>
+                    <!-- Record -->
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link p-3">
+                            User dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Logout -->
+                        <a href="javascript:void(0)" data-target="#logoutModal" data-toggle="modal" class="btn btn-primary px-5 p-3">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            
+        </div>
+    </nav>
+
+    <!-- 
+        ========================  L O G O U T     M O D A L  =======================
+    -->
+    <div class="modal fade" id="logoutModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-body text-center">
+                    <h6 class="mb-4">Are you sure you want to logout?</h6>
+                    <a href="login.html" class="btn btn-primary px-5 py-2">Yes</a>
+                    <button type="button" data-dismiss="modal" class="btn btn-light px-5 py-2">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- 
+        ========================  M A S T H E A D  =======================
+    -->
+     <section class="masthead">
+        <div class="masthead-overlay d-block d-md-none"></div>
+        <div class="container">
+            <div class="masthead-content">
+                <div class="row">
+                    <div class="col-md-6 order-md-1 d-none d-md-inline-flex">
+                        <div class="masthead-item">
+                            <img src="./assets/bg/office png.png" class="img-fluid" width="400px" alt="" style="filter: drop-shadow(2px 4px 4px #41404080);">
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-0 d-flex align-items-center">
+                        <div class="masthead-item">
+                            <h1 class="font-weight-bold">Book an Appointment with The HOD of Computer Science Now!</h1>
+                            <h3 class="text-muted">· NACOSS ·</h3>
+                            <a href="new-appointment.html" class="btn px-5 py-3 btn-outline-primary">
+                                Book Now!
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+    </section> 
+
+
+    <!-- 
+        ========================  S E R V I C E  =======================
+    -->
+    <section class="services">
+        <div class="container">
+            <!-- service -->
+            <div class="col-lg-8 mx-auto p-0">
+                <div class="service text-center">
+                    <!-- service text -->
+                    <p class="text-muted">
+                        For the purpose of not meeting the Head of Department in office, meeting a crowd in front of the Head of Department's office, running into the Head of Department when he/she is leaving the office,
+                        running into the Head of Department when he/she is in another meeting etc. this software was designed to help reduced dissapointments when scheduling a meeting with the Head of Department
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        ========================  F E A T U R E S  =======================
+    -->
+    <section class="features">
+        <div class="container">
+            <div class="features-header text-center">
+                <h2 class="features-title font-weight-bold ">Features</h2>
+                <cite class="text-muted">You can use this site to achieve the following purpose</cite>
+            </div>
+
+            <div class="row">
+                <!-- feature -->
+                <div class="col-lg-4 mb-4">
+                    <div class="feature text-center">
+                        <!-- feature title -->
+                        <h5 class="font-weight-bold mb-3">Manage Appointment</h5>
+                        <!-- feature text -->
+                        <p class="text-muted">
+                            Book and cancel Appointments with the Head of Department at his/her convinient time to avoid dissapointments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- feature -->
+                <div class="col-lg-4 mb-4">
+                    <div class="feature text-center">
+                        <!-- feature title -->
+                        <h5 class="font-weight-bold mb-3">View all Appointments</h5>
+                        <!-- feature text -->
+                        <p class="text-muted">
+                            You have access to the record of all booked and cancelled appointments. You can also modify records.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- feature -->
+                <div class="col-lg-4 mb-4">
+                    <div class="feature text-center">
+                        <!-- feature title -->
+                        <h5 class="font-weight-bold mb-3">Manage Profile</h5>
+                        <!-- feature text -->
+                        <p class="text-muted">
+                            You can manage your profile by adding, removing, editing and updating your details. Do well to Update your correct details to help enhance efficient communication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+        ========================  B I L L B O A R D  =======================
+    -->
+    <section class="billboard">
+        <div class="container">
+            <div class="row justify-content-end">
+                <!-- Bill Board Content -->
+                <div class="col-lg-8 text-lg-right">
+                    <h1 class="font-weight-bold text-white mb-4">
+                        Manage your Appointments with the Head of Department's Office
+                    </h1>
+                    <!-- link -->
+                    <a href="#" class="btn btn-primary px-5 py-3">Manage Appointments</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+        ========================  H O D     C O N T A C T  =======================
+    -->
+    <section class="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Bill Board Content -->
+                <div class="col-lg-4 col.md-6 col-sm-10">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-white">
+                            <h6 class="font-weight-bold m-0">
+                                Head Of Department Contact
+                            </h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="./assets/avatar/3.jpeg" class="rounded-circle d-block img-fluid mx-auto" width="100px" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <!-- name -->
+                                    <div class="name">
+                                        <!-- label -->
+                                        <h6 class="font-weight-bold d-inline-block">Name:</h6> &nbsp;
+                                        <!-- item -->
+                                        <p class="text-muted d-inline-block">Williams C</p>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="Email">
+                                        <!-- label -->
+                                        <h6 class="font-weight-bold d-inline-block">Email:</h6> &nbsp;
+                                        <!-- item -->
+                                        <p class="text-muted d-inline-block">2illiams@gmail.com</p>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="Phone">
+                                        <!-- label -->
+                                        <h6 class="font-weight-bold d-inline-block">Phone:</h6> &nbsp;
+                                        <!-- item -->
+                                        <p class="text-muted d-inline-block">0707 - *** - 0101</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+   
+    <!-- 
+        ========================  F O O T E R  =======================
+    -->
+    <footer class="bg-dark py-5">
+        <div class="container text-center">
+            <!-- footer items container -->
+            <div class="d-flex justify-content-center">
+                <!-- item 1 -->
+                <div class="px-2 d-flex align-items-center">
+                    <img src="./assets/bg/index.jpg" width="100px" class="img-fluid rounded-circle" alt="">
+                </div>
+                <!-- item 2 -->
+                <div class="px-2">
+                    <img src="./assets/bg/sias.jpg" width="100px" class="img-fluid rounded-circle" alt="">
+                </div>
+                <!-- item 3 -->
+                <div class="px-2">
+                    <img src="./assets/bg/NACOSS-logo.png" width="100px" class="img-fluid" alt="">
+                </div>
+            </div>
+
+            <!-- main footer with date -->
+            <div class="footer mt-5 text-white">
+                Copyright &copy; <span id="footerYear"></span>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery Link -->
+    <script src="./vendor/jQuery/jquery-3.5.1.min.js"></script>
+    <!-- Popper JS Link -->
+    <script src="./vendor/popper.js/umd/popper.min.js"></script>
+    <!-- Bootstrap JS Link -->
+    <script src="./vendor/bootstrap-4.4.1-dist/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <!-- AOS JS Link -->
+    <script src="./vendor/aos-master/aos-master/dist/aos.js"></script>
+    <!-- External JS Script Link -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
